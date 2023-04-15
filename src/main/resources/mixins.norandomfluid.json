@@ -1,0 +1,8 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "package": "com.wdcftgg.norandomfluid.mixin",
+  "refmap": "refmap.norandomfluid.json",
+  "mixins": [
+    "NoRandomFluid"
+  ]
+}
