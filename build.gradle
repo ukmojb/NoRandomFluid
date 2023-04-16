@@ -92,16 +92,11 @@ processResources {
 }
 
 mixin {
-    add sourceSets.main, mod_mixin_refmap.replace('${mod_id}', mod_id)
-    config mod_mixin_configs.replace('${mod_id}', mod_id)
+    add sourceSets.main, "mixins.norandomfluid.refmap.json"
 }
 
 jar {
-    from {
-        configurations.embed.collect { it.isDirectory() ? it : zipTree(it) }
-    } {
-        exclude "LICENSE.txt", "META-INF/MANIFSET.MF", "META-INF/maven/**", "META-INF/*.RSA", "META-INF/*.SF"
-    }
+
 
     manifest {
         attributes "ForceLoadAsMod": "true"
